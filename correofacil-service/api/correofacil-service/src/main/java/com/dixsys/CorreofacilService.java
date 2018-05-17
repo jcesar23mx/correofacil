@@ -2,8 +2,10 @@ package com.dixsys;
 
 import com.dixsys.config.CorreofacilConfiguration;
 import com.dixsys.daos.m_inboxDAO;
+import com.dixsys.daos.m_mensajesDAO;
 import com.dixsys.daos.m_usuariosDAO;
 import com.dixsys.resources.m_inboxResource;
+import com.dixsys.resources.m_mensajesResource;
 import com.dixsys.resources.m_usuariosResource;
 import io.dropwizard.Application;
 import io.dropwizard.forms.MultiPartBundle;
@@ -46,6 +48,10 @@ public class CorreofacilService extends Application<CorreofacilConfiguration> {
 
         final m_inboxDAO mInboxDAO = jdbi.onDemand(m_inboxDAO.class);
         environment.jersey().register(new m_inboxResource(mInboxDAO));
+
+        final m_mensajesDAO mMensajesDAO = jdbi.onDemand(m_mensajesDAO.class);
+        environment.jersey().register(new m_mensajesResource(mMensajesDAO));
+
 
         environment.getApplicationContext().addFilter(CrossDomainFilter.class,"/*", EnumSet.of(DispatcherType.REQUEST,DispatcherType.ERROR));
 

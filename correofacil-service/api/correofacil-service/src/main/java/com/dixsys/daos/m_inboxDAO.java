@@ -16,7 +16,7 @@ public interface m_inboxDAO {
     @SqlQuery("SELECT inboxID,\n" +
             "         inboxUsuario,\n" +
             "         inboxCategoria\n" +
-            "FROM  inboxcategorias\n" +
+            "FROM  carpetasUsuario\n" +
             "WHERE inboxUsuario = :inboxUsuario;")
     List<m_inbox> inboxUser(@Bind("inboxUsuario") Integer inboxUsuario);
 

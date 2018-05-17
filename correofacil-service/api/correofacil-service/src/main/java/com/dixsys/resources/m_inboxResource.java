@@ -21,8 +21,8 @@ public class m_inboxResource {
     }
 
     @GET
-    @Path("/user")
-    public Response get_inboxUser(@PathParam("inboxUsuario/{inboxUsuario}") String inboxUsuario){
+    @Path("/user/{inboxUsuario}")
+    public Response get_inboxUser(@PathParam("inboxUsuario") String inboxUsuario){
         try {
             List<m_inbox> m_inboxLista = minboxDAO.inboxUser(Integer.parseInt(inboxUsuario));
             return Response.status((Response.Status.OK)).entity(m_inboxLista).build();
