@@ -27,8 +27,8 @@ angular.module('Authentication')
                 return str.join('&');
                 },
                 data: {
-                        username: username,
-                        password: password
+                        usucuenta: username,
+                        usucontra: password
                     }
                 })
                .then(function successCallback(data) {

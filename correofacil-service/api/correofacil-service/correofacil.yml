@@ -4,8 +4,8 @@ sampleProperty: hello!
 database:
    driverClass: com.mysql.jdbc.Driver
    url: jdbc:mysql://127.0.0.1:3306/correofacil?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&zeroDateTimeBehavior=convertToNull
-   user: root
-   password: deixa
+   user: svtest
+   password: cbi2018
   # the initial size of the connection pool
    initialSize: 8
    minSize: 8

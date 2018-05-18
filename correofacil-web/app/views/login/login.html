@@ -1,0 +1,34 @@
+
+<div class="login-box">
+    <toaster-container toaster-options="{'time-out': 3000}"></toaster-container>
+    <div class="login-logo">
+        <a>CORREO FACIL</a>
+    </div>
+    <!-- /.login-logo -->
+    <div class="login-box-body">
+        <p class="login-box-msg">Iniciar Sesión</p>
+
+        <form ng-submit="login()" role="form" name="form">
+            <div class="form-group has-feedback">
+                <input type="text" class="form-control" placeholder="Usuario" ng-model="username" >
+                <span class="glyphicon glyphicon-user form-control-feedback"></span>
+            </div>
+            <div class="form-group has-feedback">
+                <input type="password" class="form-control" placeholder="Password" ng-model="password" >
+                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+            </div>
+            <div class="row">
+                <!-- /.col -->
+                <div class="col-xs-4">
+                    <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+                </div>
+                <!-- /.col -->
+            </div>
+        </form>
+
+        <a href="">Olvide la contraseña</a><br>
+        <a href="" class="text-center">Registrar Nuevo Usuario</a>
+
+    </div>
+    <!-- /.login-box-body -->
+</div>
